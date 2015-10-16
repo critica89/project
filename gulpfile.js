@@ -7,7 +7,7 @@ gulp.task('connect', function() {
   connect.server({
     root: 'app',
     livereload: true,
-    port:888
+    port:8888
   });
   opn('http://localhost:8888')
 });
