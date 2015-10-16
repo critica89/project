@@ -1,1 +1,23 @@
-::-webkit-input-placeholder{color:#666;opacity:1}:-moz-placeholder{color:#666;opacity:1}::-moz-placeholder{color:#666;opacity:1}:-ms-input-placeholder{color:#666;opacity:1}body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}@media only screen and (max-width:768px){.animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}}
+body {
+  font-family: "RobotoRegular", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialised;
+  overflow-x: hidden; }
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: green; }
+
+body input:required:valid,
+body textarea:required:valid {
+  color: red; }
+
+.hidden {
+  display: none; }
+
+body {
+  color: green; }

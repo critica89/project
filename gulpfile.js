@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var connect = require('gulp-connect');
 var opn = require('opn');
+var sass = require('gulp-sass');
 
 // Сервер с лайврилоадом
 gulp.task('connect', function() {
@@ -24,6 +25,13 @@ gulp.task('css',function(){
 	.pipe(connect.reload());
 });
 
+//Работа с SASS
+gulp.task('sass', function () {
+  gulp.src('./sass/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('app/css'));
+});
+
 //Работа с js
 gulp.task('js',function(){
 	gulp.src('./app/js/*.js')
@@ -33,7 +41,8 @@ gulp.task('js',function(){
 gulp.task('watch',function(){
 	gulp.watch(['./app/*.html'], ['html']),
 	gulp.watch(['./app/css/*.css'], ['css']),
-	gulp.watch(['./app/js/*.js'], ['js']);
+	gulp.watch(['./app/js/*.js'], ['js']),
+	gulp.watch('./sass/*.scss', ['sass']);
 });
 // Задача по-умолчаню
 gulp.task('default', ['connect','watch'], function() {
