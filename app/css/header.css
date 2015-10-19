@@ -8,3 +8,27 @@ body {
 
 .hidden {
   display: none; }
+
+.before, .main-head:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute; }
+
+.main-head {
+  background-color: #1287bf;
+  width: 100%;
+  height: 760px;
+  position: relative; }
+  .main-head:before {
+    background: url("/img/header-bg.jpg") no-repeat center bottom;
+    background-size: cover;
+    opacity: 0.8; }
+  .main-head .top-line {
+    background-color: #FFF;
+    margin-left: -15px;
+    margin-right: -15px;
+    text-align: right; }
